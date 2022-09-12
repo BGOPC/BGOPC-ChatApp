@@ -1,6 +1,4 @@
 import React from "react";
-import Add from "../images/addAvatar.png";
-
 const Login = () => {
   return (
     <div className={"formContainer"}>
