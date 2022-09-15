@@ -169,6 +169,7 @@ $baselight: #ddddf7;
 
         .logo {
           font-weight: bold;
+          color:white;
           @include tablet {
             display: none;
           }
@@ -178,7 +179,7 @@ $baselight: #ddddf7;
           display: flex;
           gap: 10px;
           align-items: center;
-
+          color: white;
           img {
             background-color: baselight;
             height: 44px;

@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { auth, storage, db } from "../firebase";
 import Add from "../images/addAvatar.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 const Register = () => {
   const [error, setError] = useState(false);
   const navigate = useNavigate();
@@ -77,7 +77,18 @@ const Register = () => {
           <button>Sign Up</button>
           {error && <span>Something Went Wrong</span>}
         </form>
-        <p>You do have an account? Login</p>
+        <p>
+          You do have an account?{" "}
+          <Link
+            to="/login"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            {" "}
+            Login{" "}
+          </Link>
+        </p>
       </div>
     </div>
   );

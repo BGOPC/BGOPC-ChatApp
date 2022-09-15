@@ -40,7 +40,7 @@ const Chats = () => {
   return (
     <div>
     {
-      users.map(user => <UserChat name={user.name} img={user.img} lstmsg={user.lstmsg}/>)
+      users.map(user => <UserChat key={user.id} name={user.name} img={user.img} lstmsg={user.lstmsg}/>)
     }
     </div>
   )
