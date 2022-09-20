@@ -1,23 +1,26 @@
-import React from "react";
-import Add from "../images/add.png";
-import Cam from "../images/cam.png";
-import More from "../images/more.png";
+import React, { useContext } from "react";
+import Cam from "../img/cam.png";
+import Add from "../img/add.png";
+import More from "../img/more.png";
 import Messages from "./Chat/Messages";
 import Input from "./Chat/Input";
+import { ChatContext } from "../context/ChatContext";
 
 const Chat = () => {
+  const { data } = useContext(ChatContext);
+
   return (
-    <div className="ChatBox">
+    <div className="chat">
       <div className="chatInfo">
-        <span>UserName</span>
+        <span>{data.user?.displayName}</span>
         <div className="chatIcons">
           <img src={Cam} alt="" />
           <img src={Add} alt="" />
           <img src={More} alt="" />
         </div>
       </div>
-      <Messages/>
-      <Input />
+      <Messages />
+      <Input/>
     </div>
   );
 };

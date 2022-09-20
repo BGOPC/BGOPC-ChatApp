@@ -1,17 +1,16 @@
-import React from 'react'
-import Chats from './SideBar/Chats'
-import Navbar from './SideBar/Navbar'
-import Searchbar from './SideBar/Searchbar'
+import React from "react";
+import Chats from "./SideBar/Chats";
+import Navbar from "./SideBar/Navbar";
+import Searchbar from "./SideBar/Searchbar";
 
-
-const SideBar = () => {
+const Sidebar = () => {
   return (
-    <div className='SideBar'>
-        <Navbar/>
-        <Searchbar/>
-        <Chats/>
+    <div className="sidebar">
+      <Navbar />
+      <Searchbar />
+      <Chats />
     </div>
-  )
-}
+  );
+};
 
-export default SideBar
+export default Sidebar;

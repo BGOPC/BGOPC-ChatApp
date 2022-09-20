@@ -2,9 +2,10 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import "./styles.scss";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
+
 function App() {
   const { currentUser } = useContext(AuthContext);
 
@@ -13,8 +14,9 @@ function App() {
       return <Navigate to="/login" />;
     }
 
-    return children;
+    return children
   };
+
   return (
     <BrowserRouter>
       <Routes>
@@ -28,7 +30,7 @@ function App() {
             }
           />
           <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Register />} />
+          <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </BrowserRouter>

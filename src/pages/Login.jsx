@@ -1,36 +1,38 @@
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
 
 const Login = () => {
-  const [error, setErr] = useState(false);
+  const [err, setErr] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    const email = e.target[0].value;
+    const password = e.target[1].value;
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/")
+      navigate("/");
     } catch (err) {
       setErr(true);
     }
   };
   return (
-    <div className={"formContainer"}>
-      <div className={"formWrapper"}>
+    <div className="formContainer">
+      <div className="formWrapper">
         <span className="logo">BGOPC Chat</span>
         <span className="title">Login</span>
-        <form onSubmit={handleLogin}>
-          <input type="email" placeholder="Email" name="email"/>
-          <input type="password" placeholder="Password" name="password"/>
-          <button>Login</button>
-          {error && <span>Something went wrong</span>}
+        <form onSubmit={handleSubmit}>
+          <input type="email" placeholder="email" />
+          <input type="password" placeholder="password" />
+          <button>Sign in</button>
+          {err && <span>Something went wrong</span>}
         </form>
-        <p>You don't have an account? <Link to="/signup" style={{textDecoration: "none"}}> SignUp </Link></p>
+        <p>
+          You don't have an account? <Link to="/register">Register</Link>
+        </p>
       </div>
     </div>
   );
