@@ -47,7 +47,6 @@ const Register = () => {
             await setDoc(doc(db, "userChats", res.user.uid), {});
             navigate("/");
           } catch (err) {
-            console.log(err);
             setErr(true);
             setLoading(false);
           }
