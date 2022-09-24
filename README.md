@@ -1,7 +1,6 @@
 # BGOPC Chat App
 
 
-```
 [![Build Status][build-badge]][build]
 [![Code Coverage][coverage-badge]][coverage]
 [![downloads][downloads-badge]][npmcharts] [![version][version-badge]][package]
@@ -15,7 +14,6 @@
 [![Supports React and Preact][react-badge]][react]
 [![size][size-badge]][unpkg-dist] [![gzip size][gzip-badge]][unpkg-dist]
 [![module formats: umd, cjs, and es][module-formats-badge]][unpkg-dist]
-```
 
 
 ## Available Scripts
