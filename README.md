@@ -1,20 +1,8 @@
 # BGOPC Chat App
 
+Simple Chat Application build using React JS FrameWork and Firebase cloud services
 
-[![Build Status][build-badge]][build]
-[![Code Coverage][coverage-badge]][coverage]
-[![downloads][downloads-badge]][npmcharts] [![version][version-badge]][package]
-[![MIT License][license-badge]][license]
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-113-orange.svg?style=flat-square)](#contributors)
-[![PRs Welcome][prs-badge]][prs] [![Chat][chat-badge]][chat]
-[![Code of Conduct][coc-badge]][coc]
-[![Join the community on Spectrum][spectrum-badge]][spectrum]
-
-[![Supports React and Preact][react-badge]][react]
-[![size][size-badge]][unpkg-dist] [![gzip size][gzip-badge]][unpkg-dist]
-[![module formats: umd, cjs, and es][module-formats-badge]][unpkg-dist]
-
+Website: https://bgopc-chat.web.app
 
 ## Available Scripts
 
