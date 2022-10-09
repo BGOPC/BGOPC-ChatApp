@@ -1,8 +1,19 @@
-# BGOPC Chat App
+# BGOPC Chat App(MtUChat)
 
 Simple Chat Application build using React JS FrameWork and Firebase cloud services
 
 Website: https://bgopc-chat.web.app
+
+
+## Features
+
+#### messaging
+
+You can send and read messages
+
+#### Images and Files
+
+MtUChat supports Sending Images and it 
 
 ## Available Scripts
 
